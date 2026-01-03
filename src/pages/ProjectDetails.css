@@ -1,0 +1,184 @@
+.project-container {
+  max-width: 800px;
+  margin: 0 auto; /* Center the content */
+  padding-bottom: 80px;
+}
+
+/* Header Section */
+.project-header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2rem;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.tech-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #0f172a;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #1e293b;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+.btn-secondary:hover {
+  background-color: #f8fafc;
+}
+
+/* Content Sections */
+.section-title {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-content {
+  color: #334155;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* The "Mistakes" Box*/
+.mistakes-box {
+  background-color: #fff1f2; 
+  border-left: 4px solid #f43f5e; 
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.mistakes-box h3 {
+  color: #9f1239;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.mistakes-box p {
+  color: #881337;
+  font-size: 0.95rem;
+}
+
+/* --- ARCHITECTURE DIAGRAM --- */
+.architecture-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f8fafc;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+  flex-wrap: wrap; /* Wraps on mobile */
+}
+
+/* The Boxes (Frontend, Backend, DB) */
+.arch-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+}
+
+.arch-box strong {
+  display: block;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.arch-box span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* The Arrows */
+.arch-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  min-width: 60px;
+}
+
+.arrow-line {
+  width: 100%;
+  height: 2px;
+  background-color: #cbd5e1;
+  margin: 4px 0;
+  position: relative;
+}
+
+/* Arrow head (triangle) */
+.arrow-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #cbd5e1;
+}
+
+/* Mobile: Stack them vertically */
+@media (max-width: 600px) {
+  .architecture-diagram {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .arch-arrow {
+    transform: rotate(90deg); /* Point arrow down */
+  }
+  
+  .arch-arrow span {
+    transform: rotate(-90deg); /* Keep text readable? Actually lets just hide text on mobile or keep simple */
+    display: none; /* Hide labels on mobile to keep it clean */
+  }
+}
