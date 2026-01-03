@@ -1,0 +1,44 @@
+/* --- DESKTOP LAYOUT (Default) --- */
+.app-container {
+  display: flex; /* Puts Sidebar and Main side-by-side */
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 260px; /* Matches Sidebar width */
+  padding: 40px;
+  width: 100%;
+  background-color: #f8fafc; /* Light background for contrast */
+}
+
+.header-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.header-text p {
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+/* --- MOBILE LAYOUT (Screens smaller than 768px) --- */
+@media (max-width: 768px) {
+  
+  /* 1. Stack them vertically */
+  .app-container {
+    flex-direction: column;
+  }
+
+  /* 2. Reset the margin because Sidebar is now on top, not left */
+  .main-content {
+    margin-left: 0; 
+    padding: 20px; /* Less padding on phone */
+    margin-top: 80px; /* Push content down so it doesn't hide behind the top bar */
+  }
+
+  /* 3. Make text smaller */
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+}
