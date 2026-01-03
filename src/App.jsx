@@ -1,23 +1,24 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import BentoGrid from './components/BentoGrid';
-import './App.css'; 
+import Home from './pages/Home';
+import ProjectDetails from './pages/ProjectDetails';
+import './App.css';
 
 function App() {
   return (
     <div className="app-container">
-      
       <Sidebar />
 
       <main className="main-content">
-        <div className="header-text">
-          <h1>Welcome, Recruiter.</h1>
-          <p>Junior Full Stack Developer focused on business logic and clean architecture.</p>
-        </div>
-        
-        <BentoGrid />
+        <Routes>
+          {/* The Home Page */}
+          <Route path="/" element={<Home />} />
+          
+          {/* The Project Page */}
+          <Route path="/project/event-booking" element={<ProjectDetails />} />
+        </Routes>
       </main>
-      
     </div>
   )
 }

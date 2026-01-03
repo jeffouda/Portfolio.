@@ -1,12 +1,14 @@
 import React from 'react';
 import { ArrowUpRight, Github, Database, Server, Code } from 'lucide-react';
-import './BentoGrid.css'; // We'll make this next
+import './BentoGrid.css'; 
+import { Link } from 'react-router-dom'
 
 const BentoGrid = () => {
   return (
     <div className="bento-container">
       
-      {/* TILE 1: The HERO Project (Spans 2 columns) */}
+      {/* The HERO Project (Spans 2 columns) */}
+      <Link to="/project/event-booking" style={{textDecoration: 'none', display: 'contents' }}>
       <div className="bento-tile hero-tile">
         <div className="tile-header">
           <span className="tag">Core Project</span>
@@ -18,15 +20,16 @@ const BentoGrid = () => {
           <span>Python</span><span>Flask</span><span>SQL</span>
         </div>
       </div>
+</Link>
 
-      {/* TILE 2: The Technical Proof (Spans 1 column) */}
+      {/*The Technical Proof (Spans 1 column) */}
       <div className="bento-tile secondary-tile">
         <div className="tile-icon"><Server size={30} /></div>
         <h3>REST API</h3>
         <p>Secure API with JWT Auth & Validation.</p>
       </div>
 
-      {/* TILE 3: The "Learning Log" (Spans 1 column) */}
+      {/*The "Learning Log" (Spans 1 column) */}
       <div className="bento-tile info-tile">
         <h3>Current Focus</h3>
         <div className="learning-item">
@@ -39,7 +42,7 @@ const BentoGrid = () => {
         </div>
       </div>
 
-      {/* TILE 4: GitHub Stats / Social Proof */}
+      {/*GitHub Stats / Social Proof */}
       <div className="bento-tile social-tile">
         <Github size={40} />
         <h3>50+ Commits</h3>
