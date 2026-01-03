@@ -5,9 +5,9 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      /*Profile Section */
+      {/* Profile Section */}
       <div className="profile">
-        <div className="avatar">JD</div> {/* JD = Junior Dev. You can put an image later */}
+        <div className="avatar">JD</div> {/* JD = Junior Dev.*/}
         <h3>Junior Dev</h3>
         <p>Full Stack Engineer</p>
       </div>
@@ -15,24 +15,24 @@ const Sidebar = () => {
       {/*Navigation Links*/}
       <nav className="nav-links">
         <a href="#" className="nav-item active">
-          <Home size={20} />
+          <Home size={30} />
           <span>Home</span>
         </a>
         <a href="#" className="nav-item">
-          <FolderGit2 size={20} />
+          <FolderGit2 size={30} />
           <span>Projects</span>
         </a>
         <a href="#" className="nav-item">
-          <User size={20} />
+          <User size={30} />
           <span>About Me</span>
         </a>
       </nav>
 
       {/*Footer / Socials*/}
       <div className="socials">
-        <a href="#" className="social-icon"><Github size={20} /></a>
-        <a href="#" className="social-icon"><Linkedin size={20} /></a>
-        <a href="mailto:youremail@gmail.com" className="social-icon"><Mail size={20} /></a>
+        <a href="#" className="social-icon"><Github size={35} /></a>
+        <a href="#" className="social-icon"><Linkedin size={35} /></a>
+        <a href="mailto:youremail@gmail.com" className="social-icon"><Mail size={35} /></a>
       </div>
     </div>
   );
