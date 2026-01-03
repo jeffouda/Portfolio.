@@ -66,7 +66,7 @@
   font-size: 0.8rem;
 }
 
-/* 2. SECONDARY & INFO TILES */
+/* SECONDARY & INFO TILES */
 .secondary-tile {
   background-color: #f8fafc;
 }
@@ -89,7 +89,7 @@
   color: #475569;
 }
 
-/* 3. SOCIAL TILE */
+/*  SOCIAL TILE */
 .social-tile {
   align-items: center;
   justify-content: center;
